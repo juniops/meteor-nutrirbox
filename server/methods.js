@@ -27,5 +27,8 @@ Meteor.methods({
     },
     publishPost: function (message, name) {
         Posts.publish(message, name);
+    },
+    saveDish: function(name, description, category, amount, unit){
+        Dishes.save(name, description, category, amount, unit);
     }
 });

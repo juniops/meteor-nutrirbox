@@ -1,0 +1,27 @@
+<template name="dishes">
+    <div class="row">
+        <div class="col-sm-12">
+            <fieldset>
+                <legend>Pratos Registrados</legend>
+                <table class="table table-responsive">
+                    <tr>
+                        <th>Nome</th>
+                        <th>Descrição</th>
+                        <th>Categoria</th>
+                        <th>Quantidade</th>
+                        <th>Unidade</th>
+                    </tr>
+                    {{#each dishes}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{description}}</td>
+                            <td>{{category}}</td>
+                            <td>{{amount}}</td>
+                            <td>{{unit}}</td>
+                        </tr>
+                    {{/each}}
+                </table>
+            </fieldset>
+        </div>
+    </div>
+</template>

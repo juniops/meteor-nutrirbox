@@ -1,4 +1,4 @@
-//db.createCollection('dishes')
+// db.createCollection('dishes')
 Dishes = new Mongo.Collection('dishes');
 
 Dishes.save = function(name, description, category, amount, unit){

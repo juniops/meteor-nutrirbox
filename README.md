@@ -10,4 +10,3 @@ Este e um projeto para a empresa Nutrirbox
 * Inicie o comando: `meteor`
 
 ## Autor
-

@@ -23,11 +23,14 @@
                             <li><a href="{{pathFor route='login'}}">Logout</a></li>
                         </ul>
                     </div>
-                    <div class="logo-element">
-                        NUTRIRBOX
-                    </div>
+                    <div class="logo-element"> NUTRIRBOX </div>
                 </li>
 
+                <li class="{{isActiveRoute regex='dish'}}">
+                    <a href="{{pathFor route='dish'}}"><i class="fa fa-diamond"></i>
+                        <span class="nav-label" data-i18n="nav.layouts">Pratos</span>
+                    </a>
+                </li>
                 <li>
                     <a href="#">
                         <i class="fa fa-sitemap"></i>

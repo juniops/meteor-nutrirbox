@@ -1,4 +1,4 @@
-Template.profile.rendered = function(){
+Template.profile1.rendered = function(){
 
     // Set options for peity charts
     $(".line").peity("line",{

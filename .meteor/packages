@@ -4,32 +4,30 @@
 # 'meteor add' and 'meteor remove' will edit this file for you,
 # but you can also edit it by hand.
 
-meteor-platform
+meteor-base
+iron:router
 accounts-base
 accounts-password
-ian:accounts-ui-bootstrap-3
 accounts-facebook
 service-configuration
+mongo
+
 meteorhacks:npm
-appcache
 meteorhacks:fast-render
+
+jquery
+
+ian:accounts-ui-bootstrap-3
+twbs:bootstrap@3.3.6
 arunoda:find-faster
 standard-minifier-css
 standard-minifier-js
-
-autopublish
 less
-iron:router
 fortawesome:fontawesome
-zimme:iron-router-active
-jquery
-okgrow:router-autoscroll
-dbarrett:dropzonejs
 
-twbs:bootstrap@3.3.6
-meteor-base
-mobile-experience
-mongo
+zimme:iron-router-active
+okgrow:router-autoscroll
+
 blaze-html-templates
 session
 tracker
@@ -40,6 +38,13 @@ ejson
 spacebars
 check
 
-
-
 npm-container
+
+rochal:slimscroll
+mrt:chosen-package
+aldeed:tabular
+tkornblit:icheck
+kevohagan:sweetalert
+abpetkov:switchery
+chrismbeckett:toastr
+afruth:bootstrap-touchspin

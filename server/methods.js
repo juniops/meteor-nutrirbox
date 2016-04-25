@@ -28,7 +28,14 @@ Meteor.methods({
     publishPost: function (message, name) {
         Posts.publish(message, name);
     },
-    saveDish: function(name, description, category, amount, unit){
-        Dishes.save(name, description, category, amount, unit);
+    saveDish: function(name, description, category, amount, unit, _id){
+        if(_id == '') {
+            Dishes.save(name, description, category, amount, unit);
+        } else {
+            Dishes.alter(_id, name, description, category, amount, unit);
+        }
+    },
+    deleteDish: function(_id){
+        Dishes.delete(_id);
     }
 });

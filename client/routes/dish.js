@@ -12,16 +12,3 @@ Router.route("/dish", function(){
     name: "dish",
     fastRender: true
 });
-
-Router.route("/dish-form", function(){
-    this.render("dish-form", {
-        data: function(){
-            return {
-                teste: "teste"
-            }
-        }
-    });
-},{
-    name: "dish-form",
-    fastRender: true
-});

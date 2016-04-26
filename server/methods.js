@@ -1,10 +1,4 @@
 Meteor.methods({
-    followUser: function (friendId) {
-        Friendships.follow(friendId);
-    },
-    unfollowUser: function (friendId) {
-        Friendships.unfollow(friendId);
-    },
     profileUpdate: function (name, about) {
         Meteor.users.update(
             {_id: this.userId},
@@ -25,9 +19,7 @@ Meteor.methods({
             {multi: true}
         );
     },
-    publishPost: function (message, name) {
-        Posts.publish(message, name);
-    },
+
     saveDish: function(name, description, category, amount, unit, _id){
         if(_id == '') {
             Dishes.save(name, description, category, amount, unit);

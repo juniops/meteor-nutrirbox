@@ -17,7 +17,6 @@ meteorhacks:fast-render
 
 jquery
 
-ian:accounts-ui-bootstrap-3
 twbs:bootstrap@3.3.6
 arunoda:find-faster
 standard-minifier-css
@@ -48,3 +47,4 @@ kevohagan:sweetalert
 abpetkov:switchery
 chrismbeckett:toastr
 afruth:bootstrap-touchspin
+timmyg:wow

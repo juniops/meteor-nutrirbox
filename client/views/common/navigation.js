@@ -2,8 +2,14 @@ Template.navigation.rendered = function(){
 
     // Initialize metisMenu
     $('#side-menu').metisMenu();
-
 };
+
+Template.navigation.helpers({
+    user: function () {
+        return Meteor.user();
+    }
+});
+
 
 // Used only on OffCanvas layout
 Template.navigation.events({

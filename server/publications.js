@@ -5,3 +5,7 @@ Meteor.publish("user", function(_id) {
 Meteor.publish("dishes", function(){
     return Dishes.list();
 });
+
+Meteor.publish("categories", function(){
+    return Categories.list();
+})

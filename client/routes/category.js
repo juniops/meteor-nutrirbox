@@ -1,16 +1,13 @@
-Router.route("/dish", function(){
-    var _id = Meteor.userId();
-    this.subscribe("dishes").wait();
+Router.route("/category", function(){
     this.subscribe("categories").wait();
-    this.render("dish",{
+    this.render("category",{
         data: function(){
             return {
-                dishes: Dishes.list(),
                 categories: Categories.list()
             }
         }
     });
 },{
-    name: "dish",
+    name: "category",
     fastRender: true
 });

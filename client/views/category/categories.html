@@ -1,0 +1,25 @@
+<template name="categoryList">
+    <div class="table-responsive">
+        <table class="table table-striped table-bordered table-hover dataTables-example" >
+            <thead>
+            <tr>
+                <th></th>
+                <th>Nome</th>
+                <th>Identificador</th>
+            </tr>
+            </thead>
+            <tbody>
+            {{#each categories}}
+                <tr>
+                    <td width="81px">
+                        <button class="btn btn-circle btn-danger btn-del-category" name="btn-del-category"><i class="fa fa-times"></i></button>
+                        <button class="btn btn-circle btn-info btn-edit-category" name="btn-edit-category"><i class="fa fa-edit"></i></button>
+                    </td>
+                    <td>{{name}}</td>
+                    <td>{{identifier}}</td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</template>

@@ -37,5 +37,15 @@ Meteor.methods({
     },
     deleteDish: function(_id){
         Dishes.delete(_id);
+    },
+    saveCategory: function(name, identifier, _id){
+        if(_id == ''){
+            Categories.new(name, identifier);
+        } else {
+            Categories.alter(_id, name, identifier);
+        }
+    },
+    deleteCategory: function(_id){
+        Categories.delete(_id);
     }
 });

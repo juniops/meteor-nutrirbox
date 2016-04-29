@@ -9,8 +9,7 @@ Template.register.events({
         Accounts.createUser({
             username:name,
             email: email,
-            password: password,
-            profile: 'guest'
+            password: password
         }, function(error){
             if(error){
                 console.log(error.reason); // Output error if registration fails

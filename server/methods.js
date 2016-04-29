@@ -1,22 +1,20 @@
 Meteor.methods({
-    profileUpdate: function (name, about) {
+    updateProfile: function (name) {
+        // console.log( profile.name )
+
+        // Meteor.users.update(Meteor.userId(), {$set: {'profile.isAdmin': true}});
+
         Meteor.users.update(
-            {_id: this.userId},
+            {_id: Meteor.userId()},
             {
                 $set: {
+                    //"profile.phone": profile.phone,
+                    // "profile.name": profile.name,
                     "profile.name": name,
-                    "profile.about": about
+                    // "profile.gender": profile.gender,
+                    // "profile.age": profile.age
                 }
             }
-        );
-        Posts.update(
-            {userId: this.userId},
-            {
-                $set: {
-                    name: name
-                }
-            },
-            {multi: true}
         );
     },
 

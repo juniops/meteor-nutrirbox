@@ -141,8 +141,8 @@ Router.route('/contacts', function () {
     this.render('contacts');
 });
 
-Router.route('/profile', function () {
-    this.render('profile');
+Router.route('/profile1', function () {
+    this.render('profile1');
 });
 
 Router.route('/profile2', function () {

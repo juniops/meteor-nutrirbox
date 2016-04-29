@@ -1,0 +1,47 @@
+<template name="profileForm">
+
+    <div class="ibox float-e-margins">
+        <div class="ibox-title">
+            <h5>Seu perfil</h5>
+        </div>
+        <div class="ibox-content">
+            <form class="form-horizontal" id="form-profile">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Nome:</label>
+                    <div class="col-lg-10"><input type="text" placeholder="Nome" class="form-control" name="name"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">E-mail:</label>
+                    <div class="col-lg-10"><input type="text" placeholder="E-mail" class="form-control" name="email"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Telefone:</label>
+                    <div class="col-lg-5"><input type="text" placeholder="Telefone" class="form-control" name="phone" data-mask="(99) 9999-9999"></div>
+                </div>
+
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Idade:</label>
+                    <div class="col-lg-5"><input type="text" placeholder="Idade" class="form-control" name="age"></div>
+                </div>
+
+                <div class="form-group"><label class="col-sm-2 control-label">Sexo:</label>
+                    <div class="col-lg-10">
+                        <div><label> <input type="radio" checked="" value="male" name="gender"> Masculino</label></div>
+                        <div><label> <input type="radio" value="female" name="gender"> Feminino</label></div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-lg-offset-2 col-lg-5">
+                        <button class="btn btn-primary" type="submit"><i class="fa fa-edit"></i> atualizar perfil</button>
+                    </div>
+                    <div class="col-lg-5 text-right">
+                        <button class="btn btn-info" type="submit"><i class="fa fa-key"></i> atualizar senha</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</template>

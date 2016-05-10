@@ -5,6 +5,8 @@ Template.register.events({
         var email = $('[name=email]').val();
         var name = $('[name=name]').val();
         var password = $('[name=password]').val();
+        var password = $('[name=password]').val();
+        var password = $('[name=password]').val();
 
         Accounts.createUser({
             username:name,

@@ -6,18 +6,36 @@
         <h3>Registrar</h3>
 
         <form class="m-t register">
+
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nome" required="" name="name">
             </div>
+
             <div class="form-group">
                 <input type="email" class="form-control" placeholder="E-mail" required="" name="email">
             </div>
+
             <div class="form-group">
                 <input type="password" class="form-control" placeholder="Senha" required="" name="password">
             </div>
+
+            <div class="form-group">
+                <input type="text" placeholder="Telefone" class="form-control" name="phone" data-mask="(99) 9999-9999" value="{{phone}}">
+            </div>
+
+            <div class="form-group">
+                <input type="date" placeholder="Data de Nascimento" class="form-control date" name="dateOfBirth" value="{{dateOfBirth}}">
+            </div>
+
+            <div class="form-group">
+                    <label> <input type="radio"  value="male" name="gender" {{genderMale}} > Masculino</label>
+                    <label> <input type="radio" value="female" name="gender" {{genderFemale}} > Feminino</label>
+            </div>
+
             <div class="form-group">
                 <div class="checkbox i-checks"><label> <input type="checkbox" name="terms"><i></i> Aceito os termos </label></div>
             </div>
+
             <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>
 
             <p class="text-muted text-center">

@@ -7,71 +7,37 @@
 
 
         <div class="row m-b-lg m-t-lg">
-            <div class="col-md-6">
+            <div class="col-lg-7">
 
-                <div class="profile-image">
-                    <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
-                </div>
-                <div class="profile-info">
-                    <div class="">
-                        <div>
-                            <h2 class="no-margins">
-                                Alex Smith
-                            </h2>
-                            <h4>Founder of Groupeq</h4>
-                            <small>
-                                There are many variations of passages of Lorem Ipsum available, but the majority
-                                have suffered alteration in some form Ipsum available.
-                            </small>
+
+                <div class="row">
+
+                    <div class="col-lg-2">
+                        <div class="profile-image">
+                            <img src="img/a4.jpg" class="img-circle circle-border m-b-md" alt="profile">
                         </div>
                     </div>
+
+                    <div class="col-lg-7">
+                        <h3 class="no-margins"> {{name}}</h3>
+                        <h4>{{emails}}</h4>
+                        <div class="text-left">
+                            <a href="#">
+                                <small><i class="fa fa-key"></i> alterar senha</small>
+                            </a>
+                            <br>
+                            <a href="#">
+                                <small><i class="fa fa-edit"></i> alterar imagem de perfil</small>
+                            </a>
+                        </div>
+                    </div>
+
                 </div>
-            </div>
-            <div class="col-md-3">
-                <table class="table small m-b-xs">
-                    <tbody>
-                    <tr>
-                        <td>
-                            <strong>142</strong> Projects
-                        </td>
-                        <td>
-                            <strong>22</strong> Followers
-                        </td>
 
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>61</strong> Comments
-                        </td>
-                        <td>
-                            <strong>54</strong> Articles
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>
-                            <strong>154</strong> Tags
-                        </td>
-                        <td>
-                            <strong>32</strong> Friends
-                        </td>
-                    </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="col-md-3">
-                <small>Total de Pedidos Saudáveis <i c></i></small>
-                <h2 class="no-margins">206 480</h2>
-                <div id="sparkline1"></div>
-            </div>
-        </div>
-
-        <div class="row">
-
-            <div class="col-lg-8">
                 {{> profileForm}}
             </div>
 
-            <div class="col-lg-4 m-b-lg">
+            <div class="col-lg-5 m-b-lg">
                 <h2>Últimos Pedidos</h2>
                 <div id="vertical-timeline" class="vertical-container light-timeline no-margins">
                     <div class="vertical-timeline-block">
@@ -114,35 +80,12 @@
                         </div>
                     </div>
 
-                    <div class="vertical-timeline-block">
-                        <div class="vertical-timeline-icon yellow-bg">
-                            <i class="fa fa-cutlery"></i>
-                        </div>
-
-                        <div class="vertical-timeline-content">
-                            <h2>Pedido #29</h2>
-                            <ul>
-                                <li>02 - Frangos</li>
-                                <li>02 - Salada Verão</li>
-                                <li>01 - Suco Detox</li>
-                                <li>01 - Pure</li>
-                                <li>01 - Legumes no vapor</li>
-                            </ul>
-
-                            <a href="#" class="btn btn-sm btn-primary"> detalhes</a>
-                            <span class="vertical-date"> <small>12/10/2016</small> </span>
-                        </div>
-                    </div>
-
                     <div class="text-right">
                         <a href="#" class="btn btn-sm btn-default"> ver todos</a>
                     </div>
 
                 </div>
-
             </div>
-
         </div>
-
     </div>
 </template>

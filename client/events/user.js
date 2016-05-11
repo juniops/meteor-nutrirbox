@@ -1,3 +1,11 @@
+Template.register.rendered = function() {
+    if(!this._rendered) {
+        this._rendered = true;
+        console.log('Template onLoad')
+        $('.phone').inputmask({"mask": "(99) 9999-9999"});
+    }
+}
+
 Template.register.events({
     'submit form': function(event){
 
@@ -10,24 +18,13 @@ Template.register.events({
         var phone = $('[name=phone]').val();
         var dateOfBirth = $('[name=dateOfBirth]').val();
         var gender = $('[name=gender]').val();
-
-        // Accounts.onCreateUser(function(options, user) {
-        //     // We're enforcing at least an empty profile object to avoid needing to check
-        //     // for its existence later.
-        //     user.profile = options.profile ? options.profile : {};
-        //     return user;
-        // });
+        var profile = {name:name, dateOfBirth:dateOfBirth, gender:gender, phone:phone};
 
         Accounts.createUser({
             username:username,
             email: email,
             password: password,
-
-            // name:name,
-            // phone:phone,
-            // dateOfBirth: dateOfBirth,
-            // gender: gender,
-
+            profile:profile
         }, function(error){
             if(error){
                 console.log(error.reason); // Output error if registration fails

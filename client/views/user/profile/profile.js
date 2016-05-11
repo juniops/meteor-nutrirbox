@@ -25,15 +25,13 @@ Template.profileForm.events({
         e.preventDefault();
 
         var name = template.find("input[name=name]").value;
-        var _email = template.find("input[name=email]").value;
         var dateOfBirth = template.find("input[name=dateOfBirth]").value;
         var gender = template.find("input[name=gender]:checked").value;
         var phone = template.find("input[name=phone]").value;
+        
         var profile = {name:name, dateOfBirth:dateOfBirth, gender:gender, phone:phone};
-        var email = { "address" : _email , "verified" : false};
 
-        Meteor.call("updateProfile", profile, email, function(error){
-            console.log(error);
+        Meteor.call("updateProfile", profile, function(error){
             if(error){
                 console.log(error.reason); // Output error if registration fails
                 swal("Erro ao criar usuário", "Entre em contato com administrador do sistema!", "error")

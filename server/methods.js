@@ -1,14 +1,8 @@
 Meteor.methods({
-    updateProfile: function (profile, email) {
+    updateProfile: function (profile) {
         Meteor.users.update(
             {_id: Meteor.userId()},
-            {$set: {"profile": profile} },
-            {$push: {
-                emails: {
-                    $each: [ email ],
-                    $position: 0
-                }
-            }}
+            {$set: {"profile": profile} }
         );
     },
 

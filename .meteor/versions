@@ -10,6 +10,7 @@ autoupdate@1.2.9
 babel-compiler@6.6.4
 babel-runtime@0.1.8
 base64@1.0.8
+bigdsk:inputmask@3.1.63
 binary-heap@1.0.8
 blaze@2.1.7
 blaze-html-templates@1.0.4
@@ -33,6 +34,7 @@ ecmascript-runtime@0.2.10
 ejson@1.0.11
 email@1.0.12
 facebook@1.2.6
+fezvrasta:bootstrap-material-design@0.3.0
 fortawesome:fontawesome@4.5.0
 geojson-utils@1.0.8
 hot-code-push@1.0.4
@@ -48,7 +50,6 @@ iron:location@1.0.11
 iron:middleware-stack@1.0.11
 iron:router@1.0.12
 iron:url@1.0.11
-jasny:bootstrap@3.1.3
 jquery@1.11.8
 kevohagan:sweetalert@1.0.0
 less@2.6.0
@@ -68,10 +69,11 @@ minifier-js@1.1.11
 minimongo@1.0.16
 modules@0.6.1
 modules-runtime@0.6.3
+momentjs:moment@2.10.6
 mongo@1.1.7
 mongo-id@1.0.4
 mongo-livedata@1.0.12
-mrt:chosen-package@0.11.1
+netanelgilad:bootstrap-material-datepicker@0.0.1
 npm-bcrypt@0.8.5
 npm-container@1.2.0
 npm-mongo@1.4.43

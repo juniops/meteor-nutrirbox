@@ -34,16 +34,15 @@ logging
 reload
 random
 ejson
-spacebars
 check
 
 npm-container
 
 rochal:slimscroll
-mrt:chosen-package
 aldeed:tabular
 tkornblit:icheck							# custom checkboxinputs
 kevohagan:sweetalert						# A BEAUTIFUL REPLACEMENT FOR JAVASCRIPT'S "ALERT"
 afruth:bootstrap-touchspin					# Bootstrap TouchSpin is a mobile and touch friendly input spinner component for Bootstrap 3.
 timmyg:wow									# animation as a class
-jasny:bootstrap								# Jasny Bootstrap is an extension - Button labels, Off canvas navmenu, Fixed alerts, Row link, Input mask File input widget
+bigdsk:inputmask							# A simple packaging of jquery.inputmask for Meteor.
+netanelgilad:bootstrap-material-datepicker	# Semantic UI DateTime picker from Eonasdan, https://github.com/Eonasdan/bootstrap-datetimepicker, packaged for Meteor.js

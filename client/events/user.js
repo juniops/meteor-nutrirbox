@@ -1,8 +1,7 @@
 Template.register.rendered = function() {
     if(!this._rendered) {
         this._rendered = true;
-        console.log('Template onLoad')
-        $('.phone').inputmask({"mask": "(99) 9999-9999"});
+        $('.phone').inputmask({"mask": "(99) 99999-9999"});
     }
 }
 
@@ -27,10 +26,14 @@ Template.register.events({
             profile:profile
         }, function(error){
             if(error){
-                console.log(error.reason); // Output error if registration fails
-                swal("Erro ao criar usuário", "Entre em contato com administrador do sistema!", "error")
+                var msg = "Entre em contato com administrador do sistema!";
+                if(error.reason == 'Email already exists.'){
+                    msg = 'E-mail já cadastrado no sistema.'
+                }
+                console.log(error.reason);
+                swal("Erro ao criar usuário", msg, "error")
             } else {
-                Router.go("dashboard1"); // Redirect user if registration succeeds
+                Router.go("dashboard1");
                 swal("Usuário criado com sucesso", "Agora você fazer seu pedido!", "success")
             }
         });

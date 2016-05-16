@@ -26,20 +26,16 @@
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Telefone 2" class="form-control phone" name="phone" value="{{phone}}">
+                <input type="text" placeholder="Telefone" class="form-control phone" name="phone" value="{{phone}}">
             </div>
 
             <div class="form-group">
-                <input type="text" placeholder="Data de Nascimento" class="form-control date" name="dateOfBirth" value="{{dateOfBirth}}">
+                <input type="date" placeholder="Data de Nascimento" class="form-control" name="dateOfBirth" value="{{dateOfBirth}}">
             </div>
 
             <div class="form-group">
                 <label> <input type="radio" value="male" name="gender" {{genderMale}} > Masculino</label>
                 <label> <input type="radio" value="female" name="gender" {{genderFemale}} > Feminino</label>
-            </div>
-
-            <div class="form-group">
-                <div class="checkbox i-checks"><label> <input type="checkbox" name="terms"><i></i> Aceito os termos </label></div>
             </div>
 
             <button type="submit" class="btn btn-primary block full-width m-b">Registrar</button>

@@ -9,6 +9,7 @@ iron:router
 accounts-base
 accounts-password
 accounts-facebook
+accounts-google
 service-configuration
 mongo
 
@@ -45,4 +46,4 @@ kevohagan:sweetalert						# A BEAUTIFUL REPLACEMENT FOR JAVASCRIPT'S "ALERT"
 afruth:bootstrap-touchspin					# Bootstrap TouchSpin is a mobile and touch friendly input spinner component for Bootstrap 3.
 timmyg:wow									# animation as a class
 bigdsk:inputmask							# A simple packaging of jquery.inputmask for Meteor.
-netanelgilad:bootstrap-material-datepicker	# Semantic UI DateTime picker from Eonasdan, https://github.com/Eonasdan/bootstrap-datetimepicker, packaged for Meteor.js
+themeteorchef:jquery-validation             # There are a number of ways to validate your forms.

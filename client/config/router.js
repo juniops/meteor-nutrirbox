@@ -239,23 +239,8 @@ Router.route('/invoicePrint', function () {
     this.layout('blankLayout')
 });
 
-Router.route('/login', function () {
-    this.render('login');
-    this.layout('blankLayout')
-});
-
 Router.route('/loginTwo', function () {
     this.render('loginTwo');
-    this.layout('blankLayout')
-});
-
-Router.route('/forgotPassword', function () {
-    this.render('forgotPassword');
-    this.layout('blankLayout')
-});
-
-Router.route('/register', function () {
-    this.render('register');
     this.layout('blankLayout')
 });
 

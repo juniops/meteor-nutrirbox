@@ -20,14 +20,19 @@
 
                     <div class="col-lg-7">
                         <h3 class="no-margins"> {{name}}</h3>
-                        <h4>{{emails}}</h4>
+                        <h4>{{email}}
+                            <a href="{{pathFor route='updateEmail'}}">
+                                <small><i class="fa fa-envelope"></i> alterar e-mail</small>
+                            </a>
+                        </h4>
+
                         <div class="text-left">
-                            <a href="#">
+                            <a href="{{pathFor route='updatePassword'}}">
                                 <small><i class="fa fa-key"></i> alterar senha</small>
                             </a>
                             <br>
                             <a href="#">
-                                <small><i class="fa fa-edit"></i> alterar imagem de perfil</small>
+                                <small><i class="fa fa-image"></i> alterar imagem de perfil</small>
                             </a>
                         </div>
                     </div>

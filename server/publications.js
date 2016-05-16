@@ -8,4 +8,4 @@ Meteor.publish("dishes", function(){
 
 Meteor.publish("categories", function(){
     return Categories.list();
-})
+});

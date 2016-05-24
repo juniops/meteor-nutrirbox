@@ -16,14 +16,32 @@
                             </span>
                         </a>
                     </div>
-                    <div class="logo-element"> NUTRIRBOX </div>
+                    <div class="logo-element"> NUTRIRBOX</div>
                 </li>
 
-                <li class="{{isActiveRoute regex='dish'}}">
-                    <a href="{{pathFor route='dish'}}"><i class="fa fa-cutlery"></i>
-                        <span class="nav-label" data-i18n="nav.layouts">Pratos</span>
-                    </a>
-                </li>
+                {{#if isInRole 'admin,view-secrets'}}
+                    <li class="{{isActiveRoute regex='dish'}}">
+                        <a href="{{pathFor route='dish'}}"><i class="fa fa-pencil"></i>
+                            <span class="nav-label" data-i18n="nav.layouts">Pedido</span>
+                        </a>
+                    </li>
+                {{/if}}
+
+                {{#if isInRole 'admin,manage-users'}}
+                    <li class="{{isActiveRoute regex='dish'}}">
+                        <a href="{{pathFor route='dish'}}"><i class="fa fa-cutlery"></i>
+                            <span class="nav-label" data-i18n="nav.layouts">Pratos</span>
+                        </a>
+                    </li>
+
+                    <li class="{{isActiveRoute regex='manageUsers'}}">
+                        <a href="{{pathFor route='manageUsers'}}"><i class="fa fa-user"></i>
+                            <span class="nav-label" data-i18n="nav.layouts">Usuários</span>
+                        </a>
+                    </li>
+                {{/if}}
+
+
                 <li>
                     <a href="#">
                         <i class="fa fa-sitemap"></i>

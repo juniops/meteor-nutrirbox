@@ -5,7 +5,6 @@ Meteor.methods({
             {$set: {"profile": profile}}
         );
     },
-
     updateEmail: function (new_email) {
         var emails = Accounts.findUserByEmail(new_email);
         
@@ -19,24 +18,14 @@ Meteor.methods({
         }
     },
 
-    saveDish: function (name, description, category, amount, unit, _id) {
+    saveDish: function (name, description, category, amount, unit, price, _id) {
         if (_id == '') {
-            Dishes.save(name, description, category, amount, unit);
+            Dishes.save(name, description, category, amount, unit, price);
         } else {
-            Dishes.alter(_id, name, description, category, amount, unit);
+            Dishes.alter(_id, name, description, category, amount, unit, price);
         }
     },
     deleteDish: function (_id) {
         Dishes.delete(_id);
-    },
-    saveCategory: function (name, identifier, _id) {
-        if (_id == '') {
-            Categories.new(name, identifier);
-        } else {
-            Categories.alter(_id, name, identifier);
-        }
-    },
-    deleteCategory: function (_id) {
-        Categories.delete(_id);
     }
 });

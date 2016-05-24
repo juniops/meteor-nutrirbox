@@ -1,13 +1,14 @@
 // db.createCollection('dishes')
 Dishes = new Mongo.Collection('dishes');
 
-Dishes.save = function(name, description, category, amount, unit){
+Dishes.save = function(name, description, category, amount, unit, price){
     var params = {
         name: name,
         description: description,
         category: category,
         amount: amount,
-        unit: unit
+        unit: unit,
+        price: price
     };
     this.insert(params);
     winston.info("Dishes.save: ", params);
@@ -18,13 +19,14 @@ Dishes.delete = function(_id){
     winston.info("Dishes.delete: ", _id);
 };
 
-Dishes.alter = function(_id, name, description, category, amount, unit){
+Dishes.alter = function(_id, name, description, category, amount, unit, price){
     var params = {
         name: name,
         description: description,
         category: category,
         amount: amount,
-        unit: unit
+        unit: unit,
+        price: price
     }
     this.update(
         {_id: _id},

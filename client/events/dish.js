@@ -1,20 +1,38 @@
+Template.dish.onRendered(function () {
+    $('.money').maskMoney({
+        affixesStay:"true",
+        thousands:".",
+        decimal:","
+    });
+
+    // accounting.formatMoney(4999.99, "R$", 2, ".", ",");
+});
+
 Template.dish.events({
+
     "submit form": function(e, template){
         e.preventDefault();
         var _id = template.find("input[name=_id]");
         var name = template.find("input[name=name]");
         var description = template.find("textarea[name=description]");
-        var category = Categories.find({identifier: $("#category").val()}).fetch();
+        var category = template.find("select[name=category]");
         var amount = template.find("input[name=amount]");
         var unit = template.find("select[name=unit]");
-        Meteor.call("saveDish", name.value, description.value, category, amount.value, unit.value, _id.value);
+        var price = template.find("input[name=price]");
+        price.value = accounting.unformat(price.value, ',');
+
+        Meteor.call("saveDish", name.value, description.value, category.value, amount.value, unit.value, price.value, _id.value);
+        swal("Prato criado com sucesso!", "", "success")
+        
         _id.value = "";
         name.value = "";
         description.value = "";
-        $("#category").val("");
+        category.value = "";
         amount.value = "";
         unit.value = "";
+        price.value = "";
     },
+
     "click .btn-del-dish": function(e, template){
         var _id = this._id;
         swal({
@@ -35,9 +53,10 @@ Template.dish.events({
     "click .btn-edit-dish": function(e, template){
         template.find("input[name=_id]").value = this._id;
         template.find("input[name=name]").value = this.name;
-        $("#description").val(this.description);
-        template.find("input[name=category]").value = this.category;
+        template.find("textarea[name=description]").value = this.description;
+        template.find("select[name=category]").value = this.category;
         template.find("input[name=amount]").value = this.amount;
-        $("#unit").val(this.unit);
+        template.find("select[name=unit]").value = this.unit;
+        template.find("input[name=price]").value = ( this.price ? this.price : 0 );
     }
 });

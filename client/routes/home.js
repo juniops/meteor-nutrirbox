@@ -4,5 +4,6 @@ Router.route("/", function () {
     this.layout('blankLayout');
 }, {
     name: "home",
+    // controller: AdminController,
     fastRender: true
 });

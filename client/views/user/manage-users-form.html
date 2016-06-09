@@ -1,71 +1,68 @@
 <template name="manageUsersForm">
     <div class="row">
         <div class="col-sm-12">
-            <form class="form-horizontal">
+            <form class="form-horizontal ">
                 <fieldset>
-                    <input type="hidden" name="_id" id="_id" value="{{_id}}">
+                    <input type="hidden" name="_id" id="_id">
 
-                    <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">Nome:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="username" id="username" class="form-control" value="{{username}}">
+                    <div class="well">
+                        <div class="form-group">
+                            <label for="email" class="col-lg-4 control-label">E-mail:</label>
+                            <div class="col-lg-4">
+                                <input type="text" name="email" id="email" class="form-control" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="password" class="col-lg-4 control-label">Senha:</label>
+                            <div class="col-lg-4">
+                                <input type="password" name="password" id="password" class="form-control" required>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">E-mail:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="email" id="email" class="form-control" value="{{email}}">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">Senha:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="password" id="password" class="form-control" value="{{password}}">
-                        </div>
-                    </div>
 
                     <div class="form-group">
                         <label for="name" class="col-lg-4 control-label">Nome Completo:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="name" id="name" class="form-control" value="{{name}}">
+                        <div class="col-lg-4">
+                            <input type="text" name="name" id="name" class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">Telefone:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="phone" id="phone" class="form-control" value="{{phone}}">
+                        <label for="phone" class="col-lg-4 control-label">Telefone:</label>
+                        <div class="col-lg-4">
+                            <input type="text" name="phone" id="phone" class="form-control phone">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">Data de Nascimento:</label>
-                        <div class="col-sm-4">
-                            <input type="text" name="dateOfBirth" id="dateOfBirth" class="form-control" value="{{dateOfBirth}}">
+                        <label for="dateOfBirth" class="col-lg-4 control-label">Data de Nascimento:</label>
+                        <div class="col-lg-4">
+                            <input type="date" name="dateOfBirth" class="form-control">
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label for="name" class="col-lg-4 control-label">Papel:</label>
+                        <label for="role" class="col-lg-4 control-label">Papel:</label>
                         <div class="col-lg-4">
                             <div class="checkbox">
                                 <label>
-                                    <label> <input type="radio" value="male" name="gender" {{genderMale}} > Administrador</label>
-                                    <label> <input type="radio" value="female" name="gender" {{genderFemale}} > Gerente</label>
-                                    <label> <input type="radio" value="female" name="gender" {{genderFemale}} > Cliente</label>
+                                    <label> <input type="radio" value="admin" name="role"> Administrador</label>
+                                    <label> <input type="radio" value="manage" name="role"> Gerente</label>
+                                    <label> <input type="radio" value="client" name="role"> Cliente</label>
                                 </label>
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <div class="col-lg-offset-4 col-lg-4">
+                        <label for="gender" class="col-lg-4 control-label">Genero:</label>
+                        <div class="col-lg-4">
                             <div class="checkbox">
                                 <label>
-                                    <label> <input type="radio" value="male" name="gender" {{genderMale}} > Masculino</label>
-                                    <label> <input type="radio" value="female" name="gender" {{genderFemale}} > Feminino</label>
+                                    <label> <input type="radio" value="male" name="gender"> Masculino</label>
+                                    <label> <input type="radio" value="female" name="gender"> Feminino</label>
                                 </label>
                             </div>
                         </div>

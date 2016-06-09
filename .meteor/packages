@@ -51,5 +51,9 @@ afruth:bootstrap-touchspin					# Bootstrap TouchSpin is a mobile and touch frien
 timmyg:wow									# animation as a class
 bigdsk:inputmask							# A simple packaging of jquery.inputmask for Meteor.
 themeteorchef:jquery-validation             # There are a number of ways to validate your forms.
+themeteorchef:controller                    # An API for organizing your template logic / https://atmospherejs.com/themeteorchef/controller
 lepozepo:accounting                         # Smart package for Accounting.js
-rainhaven:mask-money                        #jQuery Mask Money for Meteor
+rainhaven:mask-money                        # jQuery Mask Money for Meteor
+aldeed:simple-schema
+aldeed:collection2                          #
+aldeed:autoform                             # AutoForm is a Meteor package that adds UI components and helpers to easily create basic forms with automatic insert and update events, and automatic reactive validation.

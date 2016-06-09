@@ -5,9 +5,20 @@ Meteor.methods({
             {$set: {"profile": profile}}
         );
     },
+
+    updateUser: function (id, userData, roles) {
+        var loggedInUser = Meteor.user();
+        if (!loggedInUser || !Roles.userIsInRole(loggedInUser, ['admin', 'manage'])) {
+            throw new Meteor.Error(403, "Access denied")
+        }
+        Meteor.users.update(id, {$set: userData });
+        Roles.setUserRoles(id, roles);
+    },
+
+
     updateEmail: function (new_email) {
         var emails = Accounts.findUserByEmail(new_email);
-        
+
         if(emails == null){
             Meteor.users.update(
                 {_id: Meteor.userId()},
